@@ -150,7 +150,7 @@ if (!empty($cartdata)) {
                         <?php } else {?>
                             <a class="complainbtn" href="<?php echo base_url(); ?>course/logout"><?php echo $this->lang->line('logout'); ?></a>
                         <?php } }else{ if ($setting_data[0]['student_panel_login']) { ?>
-                            <a class="complainbtn" href="<?php echo base_url(); ?>site/userlogin"><?php echo $this->lang->line('login'); ?></a>
+                            <a class="complainbtn" href="<?php echo base_url(); ?>site/login"><?php echo $this->lang->line('login'); ?></a>
                         <?php } } ?>                  
                         </li>
                        
