@@ -44,7 +44,8 @@ class LocationRepo
 
     public function getLGAs($state_id)
     {
-        return Lga::where('state_id', $state_id)->orderBy('name', 'asc')->get();
+       return Lga::where('state_id', $state_id)->orderBy('name', 'asc')->get();
+       // return city::where('state_id', $state_id)->orderBy('name', 'asc')->get();
     }
 
 }

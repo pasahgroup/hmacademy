@@ -105,9 +105,11 @@
                            <div class="col-md-3">
                             <div class="form-group">
                                 <label>Phone:</label>
-                                <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="" >
+                                <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="phone No" >
                             </div>
                         </div>
+
+                  
                         
                         <div class="col-md-3">
                             <div class="form-group">
@@ -115,7 +117,8 @@
                                 <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email Address">
                             </div>
                         </div>
-                    
+
+                                       
 
 
                            <div class="col-md-3">
@@ -147,7 +150,7 @@
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Physical Address: <span class="text-danger">*</span></label>
+                                <label>Physical Addressx: <span class="text-danger">*</span></label>
                                 <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" required>
                             </div>
                         </div>
@@ -155,11 +158,12 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label for="nal_id">Nationality2: <span class="text-danger">*</span></label>
-                                <select data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
+                                    <select onchange="Countryf(this.value)" data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
                                     <option value=""></option>
-                                      @foreach($countries as $country)
+                                     @foreach($countries as $country)
                                         <option {{ (old('nal_id') == $country->id ? 'selected' : '') }} value="{{ $country->id }}">{{ $country->name }}</option>
                                     @endforeach
+
                                 </select>
                             </div>
                         </div>
@@ -183,10 +187,48 @@
                     </div>
 
 
+{{--
 
+        <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Physical Address: <span class="text-danger">*</span></label>
+                                <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" required>
+                            </div>
+                        </div>
 
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="nal_id">Nationality: <span class="text-danger">*</span></label>
+                                <select onchange="Countryf(this.value)" data-placeholder="Choose..." required name="nal_id" id="nal_id" class="select-search form-control">
+                                    <option value=""></option>
+                                    @foreach($countries as $country)
+                                        <option {{ (old('nal_id') == $country->id ? 'selected' : '') }} value="{{ $country->id }}">{{ $country->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="region">Region: <span class="text-danger">*</span></label>
+                            <select onchange="Cityf(this.value)" data-placeholder="Choose.." class="select-search form-control" name="region" id="region">
+                              
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="city">City: <span class="text-danger">*</span></label>
+                            <select data-placeholder="Select State First" class="select-search form-control" name="city" id="city">
+                              
+                            </select>
+                        </div>
+                    </div>
+
+--}}
 
                     <div class="row">
+
+
                         <div class="col-md-6">
                             <div class="form-group">
                                   <label class="d-block">Upload photo:</label>
@@ -270,7 +312,7 @@
 
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label>Phone No:</label>
+                                <label>Phone Nox:</label>
                                 <input type="text" name="phone_no" placeholder="phone No" class="form-control" value="{{ old('phone_no') }}">
                             </div>
                         </div>

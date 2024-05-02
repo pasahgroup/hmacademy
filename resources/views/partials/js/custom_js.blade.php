@@ -3,12 +3,12 @@
     function Countryf(country_id){
         var url = '{{ route('get_region', [':id']) }}';
         url = url.replace(':id', country_id);
-        var lgas = $('#region');
+        var lgas = $('#state_id');
     // document.getElementById('state_id').value = '';
     //document.getElementById("city").innerHTML = "";
 
        //alert('passed');
-   // $('#city').find('option').not(':first').remove();
+    $('#city').find('option').not(':first').remove();
       
         $.ajax({
             dataType: 'json',
@@ -33,7 +33,7 @@
 function Cityf(state_id){
         var url = '{{ route('get_city', [':id']) }}';
         url = url.replace(':id', state_id);
-        var lga = $('#city');
+        var lga = $('#lga_idx');
 
        //alert(lga);
 
